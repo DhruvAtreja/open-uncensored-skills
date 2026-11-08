@@ -1,6 +1,6 @@
 ---
 name: open-uncensored
-description: Call uncensored and abliterated open-weight LLMs (DeepSeek, GLM, Qwen, Gemma, MiMo, Llama) and uncensored image models through one OpenAI compatible API at openuncensored.com. Use when the user wants an uncensored, abliterated or less-restricted model, a model that will not refuse a legitimate request (security research, red teaming, fiction, medical or legal questions), to compare uncensored models by measured quality, or to buy and manage an Open Uncensored API key. No account needed: a prepaid key is the whole setup.
+description: "Call uncensored and abliterated open-weight LLMs (DeepSeek, GLM, Qwen, Gemma, MiMo, Llama) and uncensored image models through one OpenAI compatible API at openuncensored.com. Use when the user wants an uncensored, abliterated or less-restricted model, a model that will not refuse a legitimate request (security research, red teaming, fiction, medical or legal questions), to compare uncensored models by measured quality, or to buy and manage an Open Uncensored API key. No account needed: a prepaid key is the whole setup."
 ---
 
 # Open Uncensored
