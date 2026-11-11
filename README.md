@@ -2,7 +2,7 @@
 
 An [agent skill](https://skills.sh) that teaches Claude Code, Codex, Cursor, OpenCode and other coding agents to use
 [Open Uncensored](https://openuncensored.com): one OpenAI compatible API for uncensored and abliterated models
-(DeepSeek, GLM, Qwen, Gemma, MiMo and more), ranked by measured tests, with no account and no markup.
+(DeepSeek, GLM, Qwen, Gemma, MiMo and more), ranked by measured tests, with no account: a prepaid key, provider prices plus a 20% platform fee.
 
 ## Install
 
