@@ -16,7 +16,8 @@ provider's per token price plus a 20% platform fee (images at the listed per ima
 
 ## 1. Pick a model (no key needed)
 
-Do not hardcode a model; rankings change. Fetch them:
+Default: `deepseek-v4.1-flash-1017-uncensored` (fast, near the top of the rankings, cheap on long agent sessions thanks to prompt caching).
+To see every model or pick something specific, fetch the rankings:
 
 ```bash
 curl -s https://openuncensored.com/api/rankings.json \
@@ -24,7 +25,7 @@ curl -s https://openuncensored.com/api/rankings.json \
 ```
 
 How to choose:
-- General use: the top ranked model.
+- General use: `deepseek-v4.1-flash-1017-uncensored`.
 - Agents, tool use, coding tools: highest `completion_pct` and lowest `loop_pct`. Many uncensored models loop in tool use.
 - Must answer edgy requests: highest `non_refusal`.
 - Cheapest: compare `pricing` in `GET /api/v1/models` (USD per token as strings).
@@ -56,7 +57,7 @@ commit it. To top up an existing key, send `{"credits": 1000, "key": "<key>"}` t
 ```bash
 curl -s https://openuncensored.com/api/v1/chat/completions \
   -H "Authorization: Bearer $OU_API_KEY" -H "Content-Type: application/json" \
-  -d '{"model": "<model id from step 1>", "messages": [{"role": "user", "content": "Hello"}]}'
+  -d '{"model": "deepseek-v4.1-flash-1017-uncensored", "messages": [{"role": "user", "content": "Hello"}]}'
 ```
 
 ```python
@@ -64,7 +65,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(base_url="https://openuncensored.com/api/v1", api_key=os.environ["OU_API_KEY"])
-r = client.chat.completions.create(model="<model id>", messages=[{"role": "user", "content": "Hello"}])
+r = client.chat.completions.create(model="deepseek-v4.1-flash-1017-uncensored", messages=[{"role": "user", "content": "Hello"}])
 print(r.choices[0].message.content)
 ```
 
